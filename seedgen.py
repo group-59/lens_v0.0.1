@@ -99,7 +99,7 @@ def seedGen():
   seedRX = "{}".format(seed_sum)
   
   ## seedRX is appended to seedgen.txt for now
-  f=open("E://lens/crypto-main/seedgen.txt","a")
+  f=open("E://lens_v0.0.1/seedgen.txt","a") ## define the place you want to create the output file to
   f.writelines("\n")
   f.writelines(seedRX)
   f.close()
