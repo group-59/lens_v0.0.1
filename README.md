@@ -8,8 +8,8 @@ seedgen.py --a--> Rseed.py --c--
         \                       \
          ^--b--> filehash.py --c-^--> #? saldedchain
 
-defenitions for README.md:
-(a) have the out put file example on lines 11 through 15 
+defenitions:
+(a) have the out put file example on lines 11 through 15
 
 ## seedRX is appended to seedgen.txt for now
 f=open("E://lens_v0.0.1-main/seedgen.txt","a")
