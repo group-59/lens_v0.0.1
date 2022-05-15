@@ -42,15 +42,15 @@ def seedGen():
   ranTwo = a+1+b+2+c+3+d+4+e+5+f+6
   ranThree = a+1+3+b+2+5+c+3+7+d+4+11+e+5+13+f+6+17
   
-  ## leave ranZero out. its a table
-  abcdef_multi = ranOne+ranTwo+ranThree
-  print('ran123: \n',abcdef_multi)
   
   ## seed that are created♪
   seedOne = ranOne*16*155**512
   seedTwo = ranTwo*16*155**512
   seedThr = ranThree*16*155**512
   
+  ## leave ranZero out. its a table
+  abcdef_multi = ranOne+ranTwo+ranThree
+  print('ran123:',abcdef_multi)
   ## leng of between 1000 1500
   seed_gen = ranOne+seedOne+ranTwo+seedTwo+ranThree+seedThr*16+abcdef_multi**512
   
@@ -85,7 +85,7 @@ def seedGen():
     "seed_gen":seedInt(seed_int)
   }
   for x,y in seed.items():
-    print("seed dict: \n/seedgen.py", x,y)
+    print(x,y)
 
    ## generats binary seed_sum
   bin_id_seed = bin(seed_sum)
@@ -96,10 +96,11 @@ def seedGen():
   print("0gen : \n", "0"*155)
   print("binary_id_seed : \n", bin_id_seed)
   print("length of the seed : \n", length)
+  
   seedRX = "{}".format(seed_sum)
   
   ## seedRX is appended to seedgen.txt for now
-  f=open("E://lens_v0.0.1/seedgen.txt","a") ## define the place you want to create the output file to
+  f=open("E://lens_v0.0.1/seedgenTX.txt","a")  
   f.writelines("\n")
   f.writelines(seedRX)
   f.close()

@@ -1,6 +1,3 @@
-the text virsion should always be included in the project
-lens-text-virsion       is a file that has the text vision
-
 there are three main files listed
 seedgen.py              group-95 nine
 Rseed.py                ld98 is working on
