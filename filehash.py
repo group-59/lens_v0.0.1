@@ -4,28 +4,37 @@
 #  PATREON         MARS JANUS AND JUNO                                                               #
 ######################################################################################################
 import hashlib
-# useine stat function of os moduale
+## useine stat function of os moduale
 import os
+from Rseedgen import last_int
+## input the file name including the path to that file
+## size of the file
 
-# input the file name including the path to that file
-# size of the file
-file_size = os.stat(input("filename: "))
 
-h= hashlib.sha256()
-h.update(str(file_size).encode('utf-8'))
-h.hexdigest()
+def hash_file(filename):
+   """"This function returns the SHA-1 hash
+   of the file passed into it"""
 
-print("format the file that will be hashed including path to the file")
-print("file name that is going to get hashed: \n", file_size)
-print("size of the file : \n",file_size.st_size, "bytes")
-print("hash of the file: \n", h.hexdigest())
-'''
-filename: seedgen.py
-format the file that will be hashed including path to the file
-file name that is going to get hashed:
- os.stat_result(st_mode=33206, st_ino=11204034656, st_dev=2988945333, st_nlink=1, st_uid=0, st_gid=0, st_size=3269, st_atime=1652486274, st_mtime=1652486274, st_ctime=1652481291)
-size of the file :
- 3269 bytes
-hash of the file:
- bb656a581206082b17d5949ddb9f00160a710b151a2ae977bddedbd8a6413f87
-'''
+   ## make a hash object
+   h = hashlib.sha512()
+
+   ## open file for reading in binary mode
+   with open(filename,'rb') as file:
+
+       ## loop till the end of the file
+       chunk = 0
+       while chunk != b'':
+           ## read only 1024 bytes at a time
+           chunk = file.read(1012)
+           h.update(chunk)
+
+   ## return the hex representation of digest
+   return h.hexdigest()
+
+## filehash
+message1 = hash_file("seedgen.py")
+message2 = hash_file("seedgen-files/seedgenTX.txt")
+message3 = hash_file("Rseedgen.py")
+message4 = hash_file("filehash.py")
+previous_seed = last_int
+filehashs=(message1, message2, message3, message4, previous_seed)
