@@ -1,10 +1,10 @@
-the text virsion should always be included in the project
-lens-text-virsion       is a file that has the text vision
+the text version should always be included in the project
+lens-text-virsion       is a folder that has the text vision
 
 there are three main files listed
 seedgen.py              group-95 nine
 Rseed.py                ld98 is working on
-filehash.py             janeSero3 is working on making it work
+filehash.py             janeZero is working on making it work
 
 generated file that should be encrypted 'seedgen.txt' and singed with the partial hash from the sha256
 
