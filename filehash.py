@@ -6,10 +6,10 @@
 import hashlib
 ## useine stat function of os moduale
 import os
+import json
 from Rseedgen import last_int
 ## input the file name including the path to that file
 ## size of the file
-
 
 def hash_file(filename):
    """"This function returns the SHA-1 hash
@@ -32,9 +32,13 @@ def hash_file(filename):
    return h.hexdigest()
 
 ## filehash
-message1 = hash_file("seedgen.py")
-message2 = hash_file("seedgen-files/seedgenTX.txt")
-message3 = hash_file("Rseedgen.py")
-message4 = hash_file("filehash.py")
+file1 = hash_file("seedgen.py")
+file2 = hash_file("seedgen-files/seedgenTX.txt")
+file3 = hash_file("Rseedgen.py")
+file4 = hash_file("filehash.py")
 previous_seed = last_int
+
+## file hash should be put in the json as a table or xml
 filehashs=(message1, message2, message3, message4, previous_seed)
+
+## filehashs is a tuple
