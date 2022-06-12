@@ -3,7 +3,7 @@
 please read the READ.ME
 ###########################################################################################
                         credits for seedgen.py
-ROOM 109  owns the right ti this seedgen.py aka group-59
+ROOM 109  owns the right to this seedgen.py aka group-59
 ld98      for putting every thing together and making it coherent
 group-95  for letting ld98 use their servers to test
 ###########################################################################################
